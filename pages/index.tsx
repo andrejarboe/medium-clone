@@ -33,6 +33,10 @@ export default function Home() {
         {/*End Right Banner  */}
       </div>
       {/* END Banner */}
+
+      {/* posts */}
+        
+      {/* end posts */}
     </div>
   )
 }
