@@ -41,7 +41,7 @@ function Posts({ post }: Props) {
             Published at {new Date(post._createdAt).toLocaleDateString()}
           </p>
         </div>
-        <div className="">
+        <div className="prose py-4">
           <PortableText
             className=""
             dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
@@ -51,6 +51,7 @@ function Posts({ post }: Props) {
               // hl: (props: any) => (
               //   <hl className="my-5 text-2xl font-bold" {...props} />
               // ),
+              container: ({ children }) => children,
             }}
           />
         </div>
