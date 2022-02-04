@@ -51,7 +51,7 @@ function Posts({ post }: Props) {
               // hl: (props: any) => (
               //   <hl className="my-5 text-2xl font-bold" {...props} />
               // ),
-              container: ({ children }) => children,
+              // container: ({ children }) => children,
             }}
           />
         </div>
