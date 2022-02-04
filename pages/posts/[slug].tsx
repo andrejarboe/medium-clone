@@ -15,6 +15,11 @@ function Posts({ post }: Props) {
   return (
     <main>
       <Navbar />
+
+      <img 
+        className='w-full h-40 object-cover object-center'
+        src={urlFor(post.mainImage).url()!} 
+      alt={post.title} />
     </main>
   )
 }
