@@ -8,9 +8,9 @@ interface Props {
 }
 
 function Posts({ post }: Props) {
-  console.log('***********page info*************')
+//   console.log('***********page info*************')
 
-  console.log(post)
+//   console.log(post)
 
   return (
     <main>
