@@ -1,7 +1,7 @@
 import { log } from 'console'
 import Head from 'next/head'
 import Link from 'next/link'
-import Header from '../components/Header'
+import Navbar from '../components/Navbar'
 import { sanityClient, urlFor } from '../lib/sanity'
 import { Post } from '../lib/typings'
 
@@ -19,7 +19,7 @@ export default function Home({ posts }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Navbar />
 
       {/* Banner */}
       <div className="flex items-center justify-between border-y border-black bg-yellow-400 py-10 md:py-0">

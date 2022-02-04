@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function Header() {
+export default function Navbar() {
   return (
     <header className="mx-auto flex max-w-7xl justify-between p-5 ">
       {/* left  */}
