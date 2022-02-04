@@ -41,7 +41,7 @@ function Posts({ post }: Props) {
             Published at {new Date(post._createdAt).toLocaleDateString()}
           </p>
         </div>
-        <div className="prose py-4">
+        <div className="prose mt-10">
           <PortableText
             className=""
             dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
