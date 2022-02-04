@@ -36,9 +36,23 @@ function Posts({ post }: Props) {
             alt={post.author.name}
           />
           <p className="text-sm font-extralight">
-            Blog Post by <span className="text-green-600">{post.author.name} </span> -
+            Blog Post by{' '}
+            <span className="text-green-600">{post.author.name} </span> -
             Published at {new Date(post._createdAt).toLocaleDateString()}
           </p>
+        </div>
+        <div className="">
+          <PortableText
+            className=""
+            dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
+            projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
+            content={post.body}
+            serializers={{
+              // hl: (props: any) => (
+              //   <hl className="my-5 text-2xl font-bold" {...props} />
+              // ),
+            }}
+          />
         </div>
       </article>
     </main>
@@ -79,7 +93,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         },
         description,
         mainImage,
-        slug
+        slug,
+        body
     }`
 
   const post = await sanityClient.fetch(query, {
