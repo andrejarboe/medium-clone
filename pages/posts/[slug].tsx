@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar'
 import { sanityClient, urlFor } from '../../lib/sanity'
 import { Post } from '../../lib/typings'
 import { GetStaticProps } from 'next'
+import PortableText from 'react-portable-text'
 
 interface Props {
   post: Post
