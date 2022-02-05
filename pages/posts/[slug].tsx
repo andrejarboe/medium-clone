@@ -3,6 +3,7 @@ import { sanityClient, urlFor } from '../../lib/sanity'
 import { Post } from '../../lib/typings'
 import { GetStaticProps } from 'next'
 import PortableText from 'react-portable-text'
+import { useForm, SubmitHandler } from 'react-hook-form'
 
 interface Props {
   post: Post
