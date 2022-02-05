@@ -47,15 +47,56 @@ function Posts({ post }: Props) {
             dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
             projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
             content={post.body}
-            serializers={{
-              // hl: (props: any) => (
-              //   <hl className="my-5 text-2xl font-bold" {...props} />
-              // ),
-              // container: ({ children }) => children,
-            }}
+            serializers={
+              {
+                // hl: (props: any) => (
+                //   <hl className="my-5 text-2xl font-bold" {...props} />
+                // ),
+                // container: ({ children }) => children,
+              }
+            }
           />
         </div>
       </article>
+
+      <hr className="my-5 mx-auto max-w-lg border border-yellow-500" />
+
+      <form
+        className="my-10 mx-auto mb-10 flex max-w-2xl flex-col p-5"
+        action=""
+      >
+        <h3 className="text-sm text-yellow-500">Enjoyed this article?</h3>
+        <h4 className="text-3xl font-bold">Leave a comment below!</h4>
+        <hr className="mt-2 py-3" />
+        <label className="mb-5 block">
+          <span className="text-gray-700">Name</span>
+          <input
+            className="form-input my-1 block w-full rounded border py-2 px-3 shadow ring-yellow-500"
+            placeholder="Bob Smith"
+            type="text"
+          />
+        </label>
+        <label className="mb-5 block">
+          <span className="text-gray-700">Email</span>
+          <input
+            className="form-input my-1 block w-full rounded border py-2 px-3 shadow ring-yellow-500"
+            placeholder="Bob Smith"
+            type="text"
+          />
+        </label>
+        <label className="mb-5 block">
+          <span className="text-gray-700">Comment</span>
+          <textarea placeholder="Bob Smith" rows={8} />
+        </label>
+        <label className="mb-5 block">
+          <span className="text-gray-700">Name</span>
+          <input
+            className="form-input my-1 block w-full rounded border py-2 px-3 shadow ring-yellow-500"
+            placeholder="Bob Smith"
+            type="text"
+          />
+        </label>
+      </form>
     </main>
   )
 }
